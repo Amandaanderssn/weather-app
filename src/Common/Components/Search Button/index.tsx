@@ -49,7 +49,6 @@ const SearchBtn = () => {
                                     return (
                                         <option
                                             key={location.id}
-                                            // onClick={() => setInputValue(location.name)}
                                             value={location.name}
                                         >
                                             {location.name}, {location.region}
@@ -57,12 +56,16 @@ const SearchBtn = () => {
                                 })}
                             </datalist>
                         )}
+                        <button type="submit" onClick={!isSearching ? showInputField : handleSearch}>
+                            <SearchIcon sx={{ fontSize: 20 }} />
+                        </button>
                     </form>
                 }
-                <button
-                    onClick={!isSearching ? showInputField : handleSearch}>
-                    <SearchIcon sx={{ fontSize: 20 }} />
-                </button>
+                {!isSearching && (
+                    <button onClick={showInputField}>
+                        <SearchIcon sx={{ fontSize: 20 }} />
+                    </button>
+                )}
             </div>
 
             {data && <WeatherDisplay location={data} />}
