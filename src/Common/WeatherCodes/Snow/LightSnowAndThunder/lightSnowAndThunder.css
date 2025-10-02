@@ -1,0 +1,28 @@
+.lightning-flash {
+    position: fixed;
+    /* ligger ovanpå hela skärmen */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    opacity: 0;
+    animation: flash 8s infinite;
+}
+
+@keyframes flash {
+
+    0%,
+    97%,
+    100% {
+        opacity: 0;
+    }
+
+    98% {
+        opacity: 0.9;
+    }
+
+    99% {
+        opacity: 0.3;
+    }
+}

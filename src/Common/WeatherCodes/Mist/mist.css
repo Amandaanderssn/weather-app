@@ -1,0 +1,76 @@
+.mist-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #dfe4ea, #cfd4d9);
+    /* ljusgrå dimmig bakgrund */
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Dimlager – breda och suddiga */
+.mist-layer {
+    position: absolute;
+    width: 120%;
+    height: 50px;
+    left: -10%;
+    background: rgba(255, 255, 255, 0.4);
+    filter: blur(20px);
+    animation: moveMist 120s linear infinite;
+}
+
+/* Variera höjd, opacitet och animation */
+.mist-layer:nth-child(1) {
+    top: 10%;
+    opacity: 0.5;
+    animation-duration: 140s;
+}
+
+.mist-layer:nth-child(2) {
+    top: 20%;
+    opacity: 0.4;
+    animation-duration: 160s;
+}
+
+.mist-layer:nth-child(3) {
+    top: 30%;
+    opacity: 0.3;
+    animation-duration: 180s;
+}
+
+.mist-layer:nth-child(4) {
+    top: 40%;
+    opacity: 0.35;
+    animation-duration: 150s;
+}
+
+.mist-layer:nth-child(5) {
+    top: 50%;
+    opacity: 0.4;
+    animation-duration: 170s;
+}
+
+.mist-layer:nth-child(6) {
+    top: 60%;
+    opacity: 0.35;
+    animation-duration: 200s;
+}
+
+.mist-layer:nth-child(7) {
+    top: 70%;
+    opacity: 0.3;
+    animation-duration: 190s;
+}
+
+/* Långsam rörelse horisontellt */
+@keyframes moveMist {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(15%);
+    }
+}

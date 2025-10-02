@@ -1,0 +1,37 @@
+.light-rain-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #9eb4c7, #cfd6db);
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Regndroppar */
+.raindrop {
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 1px;
+    animation: fall linear infinite;
+}
+
+/* Regnets animation */
+@keyframes fall {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}

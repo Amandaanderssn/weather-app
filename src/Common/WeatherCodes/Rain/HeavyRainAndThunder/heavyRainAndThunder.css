@@ -1,0 +1,69 @@
+.heavy-rain-thunder-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #2c3e50, #1a252f);
+    /* mörkare, dramatisk himmel */
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Regndroppar */
+.raindrop {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Fullskärmsblixtar */
+.lightning-flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    animation: flash 6s infinite;
+}
+
+@keyframes flash {
+
+    0%,
+    93%,
+    100% {
+        opacity: 0;
+    }
+
+    94% {
+        opacity: 0.9;
+    }
+
+    95% {
+        opacity: 0.3;
+    }
+
+    96% {
+        opacity: 0.7;
+    }
+}

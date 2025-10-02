@@ -1,0 +1,39 @@
+.light-snow-possible-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #c0d5e5, #e6f0f5);
+    /* ljus, vinterkänsla */
+}
+
+/* Lätt snöfall */
+.snowflake {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: fallSnowPossible linear infinite;
+}
+
+@keyframes fallSnowPossible {
+    0% {
+        transform: translateY(-10px) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) translateX(10px);
+        /* lite drift åt sidan */
+        opacity: 0;
+    }
+}

@@ -1,0 +1,114 @@
+.partly-cloudy-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87ceeb, #fceabb);
+    /* blå himmel */
+    overflow: hidden;
+    z-index: -1;
+    /* ligger bakom innehåll */
+}
+
+/* Solen */
+.sun {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #ffdd55, #ffaa00);
+    border-radius: 50%;
+    box-shadow: 0 0 60px rgba(255, 221, 85, 0.5);
+    animation: pulse 3s infinite alternate;
+}
+
+/* Pulserande effekt */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 60px rgba(255, 221, 85, 0.5);
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 80px rgba(255, 221, 85, 0.7);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 60px rgba(255, 221, 85, 0.5);
+    }
+}
+
+/* Moln */
+.cloud {
+    position: absolute;
+    top: 20%;
+    left: 50vw;
+    width: 180px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: moveClouds 60s linear infinite;
+}
+
+.cloud:nth-child(2) {
+    width: 220px;
+    height: 110px;
+    top: 35%;
+    left: 20vw;
+    animation-duration: 80s;
+    opacity: 0.7;
+}
+
+.cloud:nth-child(3) {
+    width: 160px;
+    height: 80px;
+    top: 65%;
+    animation-duration: 70s;
+    opacity: 0.6;
+}
+
+/* Moln */
+.cloud-delayed {
+    position: absolute;
+    top: 10%;
+    left: 10vw;
+    width: 180px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: moveClouds 60s linear infinite;
+}
+
+/* Moln som dyker upp senare */
+.cloud-delayed:nth-child(5) {
+    width: 180px;
+    height: 90px;
+    top: 60%;
+    left: 80%;
+    opacity: 0.6;
+    animation-duration: 85s;
+}
+
+.cloud-delayed:nth-child(6) {
+    width: 200px;
+    height: 100px;
+    top: 55%;
+    left: 0px;
+    opacity: 0.7;
+    animation-duration: 95s;
+}
+
+/* Molnanimation */
+@keyframes moveClouds {
+    0% {
+        transform: translateX(-300px);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}

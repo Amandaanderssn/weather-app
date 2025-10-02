@@ -1,0 +1,29 @@
+.light-snow-showers-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #b5d0e5, #e3edf5);
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Blippar snön genom att ändra opacity */
+.shower-layer {
+    animation: snowShowers 6s infinite;
+}
+
+@keyframes snowShowers {
+
+    0%,
+    40%,
+    100% {
+        opacity: 0;
+    }
+
+    45%,
+    95% {
+        opacity: 1;
+    }
+}

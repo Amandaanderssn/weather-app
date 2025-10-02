@@ -1,0 +1,30 @@
+.torrential-rain-shower-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #2a3b50, #1a2430);
+    /* mörk himmel för dramatik */
+}
+
+/* Kortvariga regnskurar */
+.shower-layer {
+    animation: rainShowers 7s infinite;
+}
+
+@keyframes rainShowers {
+
+    0%,
+    40%,
+    100% {
+        opacity: 0;
+    }
+
+    45%,
+    95% {
+        opacity: 1;
+    }
+}

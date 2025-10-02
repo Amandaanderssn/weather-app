@@ -1,0 +1,94 @@
+.overcast-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #a9a9a9, #808080);
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Moln */
+.cloud {
+    position: absolute;
+    background: rgba(200, 200, 200, 0.95);
+    border-radius: 50%;
+    animation: moveClouds linear infinite;
+}
+
+/* Stora moln med utspridda startpositioner */
+.cloud:nth-child(1) {
+    width: 200vw;
+    height: 400px;
+    top: 0%;
+    left: -400px;
+    animation-duration: 400s;
+}
+
+.cloud:nth-child(2) {
+    width: 900px;
+    height: 450px;
+    top: 5%;
+    left: 50%;
+    animation-duration: 420s;
+}
+
+.cloud:nth-child(3) {
+    width: 850px;
+    height: 420px;
+    top: 15%;
+    left: 30%;
+    animation-duration: 430s;
+}
+
+.cloud:nth-child(4) {
+    width: 950px;
+    height: 480px;
+    top: 25%;
+    left: 70%;
+    animation-duration: 440s;
+}
+
+.cloud:nth-child(5) {
+    width: 800px;
+    height: 400px;
+    top: 35%;
+    left: 10%;
+    animation-duration: 410s;
+}
+
+.cloud:nth-child(6) {
+    width: 900px;
+    height: 450px;
+    top: 45%;
+    left: -300px;
+    animation-duration: 430s;
+}
+
+.cloud:nth-child(7) {
+    width: 850px;
+    height: 420px;
+    top: 55%;
+    left: 40%;
+    animation-duration: 420s;
+}
+
+.cloud:nth-child(8) {
+    width: 950px;
+    height: 480px;
+    top: 65%;
+    left: 80%;
+    animation-duration: 440s;
+}
+
+/* Molnanimation: långsam från vänster till höger och loop */
+@keyframes moveClouds {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(120vw);
+    }
+}

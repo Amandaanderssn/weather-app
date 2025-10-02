@@ -1,0 +1,40 @@
+.light-snow-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #b5d0e5, #e3edf5);
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Snöflingor */
+.snowflake {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
+    animation: fallSnow linear infinite;
+}
+
+/* Animation: mjukt och långsamt */
+@keyframes fallSnow {
+    0% {
+        transform: translateY(-10px) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(100vh) translateX(20px);
+        /* lite sidled */
+        opacity: 0;
+    }
+}

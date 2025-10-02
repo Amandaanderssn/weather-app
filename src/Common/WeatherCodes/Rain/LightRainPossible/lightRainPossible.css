@@ -1,0 +1,36 @@
+.rain-possible-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #8aa6c1, #c5d4e0);
+    /* ljus, lite molnig himmel */
+}
+
+/* Lätt regn */
+.raindrop {
+    position: absolute;
+    width: 1.5px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    animation: fallLightRain linear infinite;
+}
+
+@keyframes fallLightRain {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,166 @@
+.cloudy-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #b0c4de, #d3d3d3);
+    /* grå/blå himmel */
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Moln */
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: moveClouds linear infinite;
+}
+
+/* Olika moln med olika storlek, höjd och hastighet */
+.cloud:nth-child(1) {
+    width: 300px;
+    height: 150px;
+    top: 5%;
+    left: 20vw;
+    animation-duration: 200s;
+    opacity: 0.9;
+}
+
+.cloud:nth-child(2) {
+    width: 250px;
+    height: 120px;
+    top: 10%;
+    left: -250px;
+    animation-duration: 180s;
+    opacity: 0.8;
+}
+
+.cloud:nth-child(3) {
+    width: 350px;
+    height: 180px;
+    top: 15%;
+    left: 10vw;
+    animation-duration: 220s;
+    opacity: 0.85;
+}
+
+.cloud:nth-child(4) {
+    width: 280px;
+    height: 140px;
+    top: 20%;
+    left: 90vw;
+    animation-duration: 210s;
+    opacity: 0.8;
+}
+
+.cloud:nth-child(5) {
+    width: 320px;
+    height: 160px;
+    top: 25%;
+    left: 50vw;
+    animation-duration: 230s;
+    opacity: 0.9;
+}
+
+.cloud:nth-child(6) {
+    width: 260px;
+    height: 130px;
+    top: 30%;
+    left: 30vw;
+    animation-duration: 190s;
+    opacity: 0.75;
+}
+
+.cloud:nth-child(7) {
+    width: 300px;
+    height: 150px;
+    top: 35%;
+    left: 40vw;
+    animation-duration: 200s;
+    opacity: 0.8;
+}
+
+.cloud:nth-child(8) {
+    width: 340px;
+    height: 170px;
+    top: 40%;
+    left: -340px;
+    animation-duration: 220s;
+    opacity: 0.85;
+}
+
+.cloud:nth-child(9) {
+    width: 340px;
+    height: 170px;
+    top: 45%;
+    left: 5vw;
+    animation-duration: 220s;
+    opacity: 0.85;
+}
+
+.cloud:nth-child(10) {
+    width: 340px;
+    height: 170px;
+    top: 50%;
+    left: -500px;
+    animation-duration: 220s;
+    opacity: 0.85;
+}
+
+.cloud:nth-child(11) {
+    width: 340px;
+    height: 170px;
+    top: 55%;
+    left: 80vw;
+    animation-duration: 220s;
+    opacity: 0.85;
+}
+
+.cloud:nth-child(12) {
+    width: 340px;
+    height: 170px;
+    top: 60%;
+    left: 60vw;
+    animation-duration: 220s;
+    opacity: 0.85;
+}
+
+.cloud:nth-child(13) {
+    width: 340px;
+    height: 170px;
+    top: 65%;
+    left: 80vw;
+    animation-duration: 220s;
+    opacity: 0.85;
+}
+
+.cloud:nth-child(14) {
+    width: 340px;
+    height: 170px;
+    top: 70%;
+    left: 50vw;
+    animation-duration: 220s;
+    opacity: 0.85;
+}
+
+.cloud:nth-child(15) {
+    width: 340px;
+    height: 170px;
+    top: 75%;
+    left: 2vw;
+    animation-duration: 220s;
+    opacity: 0.85;
+}
+
+/* Molnanimation: flyttar molnen från vänster till höger och loopar */
+@keyframes moveClouds {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(120vw);
+    }
+}

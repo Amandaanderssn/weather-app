@@ -1,0 +1,45 @@
+.fog-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Mer gråblå bakgrund */
+    background: linear-gradient(to bottom, #9db3c4, #cfd8dc);
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Dimlager */
+.fog-layer {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.35) 0%,
+            /* lite tätare dimma */
+            rgba(255, 255, 255, 0.15) 60%,
+            transparent 100%);
+    opacity: 0.5;
+    animation: moveFog 90s linear infinite;
+}
+
+.fog-layer:nth-child(2) {
+    opacity: 0.4;
+    animation-duration: 120s;
+}
+
+.fog-layer:nth-child(3) {
+    opacity: 0.3;
+    animation-duration: 150s;
+}
+
+@keyframes moveFog {
+    0% {
+        transform: translateX(-40%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}

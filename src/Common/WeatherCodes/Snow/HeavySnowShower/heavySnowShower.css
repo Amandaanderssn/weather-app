@@ -1,0 +1,30 @@
+.heavy-snow-showers-background {
+    position: fixed;
+    /* ligger bakom allt innehåll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #a8c4d8, #e0e7ec);
+}
+
+/* Kortvariga byar */
+.shower-layer {
+    animation: heavySnowShowers 6s infinite;
+}
+
+@keyframes heavySnowShowers {
+
+    0%,
+    40%,
+    100% {
+        opacity: 0;
+    }
+
+    45%,
+    95% {
+        opacity: 1;
+    }
+}
