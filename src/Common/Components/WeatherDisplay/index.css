@@ -4,10 +4,16 @@
     align-items: center;
     /* justify-content: space-between; */
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
 .ConditionText {
+    /* width: 480px; */
+    width: 80%;
     font-size: 4.5rem;
+    background-color: #ffffff98;
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
 .InnerWeatherDiv {
@@ -16,17 +22,26 @@
     max-width: 30rem;
     flex-wrap: wrap;
     margin: auto;
-    padding-bottom: 5rem;
+    margin-top: 1rem;
+    /* padding-bottom: 5rem; */
+
+    /* background-color: #ffffff98; */
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .OuterWeatherDiv {
         flex-direction: column;
         justify-content: space-between;
     }
 
     .ConditionText {
-        font-size: 2rem;
+        font-size: 2.5rem;
         padding-bottom: 2rem;
+    }
+
+    .InnerWeatherDiv {
+        padding: 0;
     }
 }

@@ -1,5 +1,7 @@
 .mainDiv {
-    width: 100vw;
+    width: 90vw;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
 }
 
 h1 {

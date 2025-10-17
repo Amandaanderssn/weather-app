@@ -23,7 +23,7 @@ const WeatherDisplay = (props: WeatherDisplayProps) => {
     return (
         <div>
             <WeatherEffect statusCode={currentWeatherCode} location={location} />
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', paddingTop: "3rem" }}>
                 <LocationInfo locationInfo={location} />
                 <SunriseAndSunset localTimeZoneEpoch={LocalDateAndTimeEpoch} tz={tz} sunrise={moreWeatherInfo.astro.sunrise} sunset={moreWeatherInfo.astro.sunset} icon={`https:${location.current.condition.icon}`} />
             </div>
