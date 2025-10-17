@@ -1,0 +1,48 @@
+.ice-pellets-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #7aa4c6, #d0e1f2);
+    /* kall himmel */
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Iskorn */
+.ice-pellet {
+    position: absolute;
+    width: 5px;
+    height: 8px;
+    /* kortare än regndroppar */
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation-name: fallPellets;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Konstant fall hela vägen + studs med lätt inbromsning */
+@keyframes fallPellets {
+    0% {
+        transform: translateY(0);
+    }
+
+    90% {
+        transform: translateY(100vh);
+        /* konstant fall */
+    }
+
+    95% {
+        transform: translateY(96vh);
+        /* studsa uppåt */
+        animation-timing-function: ease-out;
+        /* bromsar bara här */
+    }
+
+    100% {
+        transform: translateY(100vh);
+        /* tillbaka ner */
+    }
+}

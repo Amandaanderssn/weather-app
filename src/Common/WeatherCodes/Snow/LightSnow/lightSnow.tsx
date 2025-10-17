@@ -1,6 +1,6 @@
 import "./lightSnow.css";
 
-function LightSnowWeather() {
+const LightSnowWeather = () => {
     const snowflakes = Array.from({ length: 40 }); // få, spridda flingor
 
     return (

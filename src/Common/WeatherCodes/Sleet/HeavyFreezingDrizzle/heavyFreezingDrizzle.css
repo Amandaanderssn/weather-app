@@ -1,0 +1,30 @@
+.heavy-freezing-drizzle-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(190, 200, 210, 0.95), rgba(160, 170, 190, 0.95));
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Droppar */
+.drizzle-drop {
+    position: absolute;
+    background: rgba(107, 168, 170, 0.8);
+    border-radius: 50%;
+    animation-name: fallHeavyDrizzle;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fallHeavyDrizzle {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}

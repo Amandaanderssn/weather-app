@@ -8,6 +8,7 @@ import WeatherBox from '../WeatherBox';
 import SunriseAndSunset from '../SunriseAndSunset';
 import './index.css'
 import LocationInfo from '../LocationInfo';
+import WeatherEffect from '../../WeatherCodes/WeatherEffect';
 
 interface WeatherDisplayProps {
     location: any
@@ -25,8 +26,13 @@ const WeatherDisplay = (props: WeatherDisplayProps) => {
     // console.log("LOCAL TIME", currentLocalTime)
     const moreWeatherInfo = location.forecast.forecastday[0]
     // console.log("mer info", moreWeatherInfo.day)
+    // console.log(moreWeatherInfo.day.condition.code)
+
+    // console.log(location.current.condition.code)
+    // const currentWeatherCode = location.current.condition.code
     return (
         <div>
+            <WeatherEffect statusCode={1171} location={location} />
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
                 {/* <div style={{ margin: 'auto', width: '80%', maxWidth: '30rem', height: 'auto' }}>
                     <h3>

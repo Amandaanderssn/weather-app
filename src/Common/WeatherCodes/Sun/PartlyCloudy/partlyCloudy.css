@@ -14,8 +14,8 @@
 /* Solen */
 .sun {
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 5%;
+    left: 0;
     width: 100px;
     height: 100px;
     background: radial-gradient(circle, #ffdd55, #ffaa00);

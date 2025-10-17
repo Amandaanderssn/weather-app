@@ -14,7 +14,7 @@ interface SunriseAndSunsetProps {
 const SunriseAndSunset = (props: SunriseAndSunsetProps) => {
     const { localTimeZoneEpoch, tz, sunrise, sunset, icon } = props
 
-    console.log("SUNRISE", sunrise)
+    // console.log("SUNRISE", sunrise)
 
     const sunRef = React.useRef<HTMLImageElement>(null);
     const arcRef = React.useRef<HTMLDivElement>(null);
@@ -45,9 +45,9 @@ const SunriseAndSunset = (props: SunriseAndSunsetProps) => {
         //     { zone: tz }
         // );
 
-        console.log("now:", now.toISO(), now.toMillis());
-        console.log("rise:", rise.toISO(), rise.toMillis());
-        console.log("set:", set.toISO(), set.toMillis());
+        // console.log("now:", now.toISO(), now.toMillis());
+        // console.log("rise:", rise.toISO(), rise.toMillis());
+        // console.log("set:", set.toISO(), set.toMillis());
 
         if (!rise.isValid || !set.isValid) {
             console.warn("Invalid sunrise or sunset time");

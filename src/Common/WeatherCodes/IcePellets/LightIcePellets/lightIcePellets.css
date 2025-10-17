@@ -1,0 +1,43 @@
+.light-hail-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(200, 210, 220, 0.95), rgba(180, 190, 200, 0.95));
+    overflow: hidden;
+    z-index: -1;
+}
+
+.hail {
+    position: absolute;
+    background: rgba(220, 220, 220, 0.9);
+    border-radius: 50%;
+    animation-name: fallHailBounceImpact;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Konstant fall hela vägen + studs med lätt inbromsning */
+@keyframes fallHailBounceImpact {
+    0% {
+        transform: translateY(0);
+    }
+
+    90% {
+        transform: translateY(100vh);
+        /* konstant fall */
+    }
+
+    95% {
+        transform: translateY(98vh);
+        /* studsa uppåt */
+        animation-timing-function: ease-out;
+        /* bromsar bara här */
+    }
+
+    100% {
+        transform: translateY(100vh);
+        /* tillbaka ner */
+    }
+}

@@ -1,6 +1,6 @@
 import "./thunderPossible.css";
 
-function ThunderPossibleWeather() {
+const ThunderPossibleWeather = () => {
   return (
     <div className="thundery-outbreaks-possible-background">
       <div className="lightning-flash"></div>

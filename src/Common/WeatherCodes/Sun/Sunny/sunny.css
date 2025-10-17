@@ -1,0 +1,96 @@
+/* .sunny-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87ceeb, #fceabb);
+    z-index: -1;
+    overflow: hidden;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 60px rgba(255, 221, 85, 0.5);
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 80px rgba(255, 221, 85, 0.7);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 60px rgba(255, 221, 85, 0.5);
+    }
+} */
+
+.sunny-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87ceeb, #fceabb);
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Själva solen */
+.sun {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin-left: 20px;
+    /* centrerar horisontellt */
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffec85, #ffb300);
+    box-shadow: 0 0 80px rgba(255, 221, 85, 0.6);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+/* Solstrålar */
+.sun-rays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(from 0deg,
+            rgba(255, 223, 0, 0.4) 0deg 10deg,
+            transparent 10deg 20deg);
+    animation: rotate 12s linear infinite;
+    mask-image: radial-gradient(circle, transparent 40%, black 60%);
+}
+
+/* Pulserande sol */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 80px rgba(255, 221, 85, 0.6);
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 100px rgba(255, 221, 85, 0.8);
+    }
+}
+
+/* Roterande solstrålar */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,30 @@
+.freezing-drizzle-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(200, 210, 220, 0.95), rgba(180, 190, 200, 0.95));
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Små droppar */
+.drizzle-drop {
+    position: absolute;
+    background: rgba(107, 168, 170, 0.8);
+    border-radius: 50%;
+    animation-name: fallDrizzle;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fallDrizzle {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
