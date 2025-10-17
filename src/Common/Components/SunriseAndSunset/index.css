@@ -55,8 +55,10 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    top: -3rem;
+    top: -9rem;
     /* använd rem/em istället för px */
     font-size: clamp(0.8rem, 2vw, 1rem);
     /* gör texten lite responsiv */
 }
+
+@media screen and (max-width: 480px) {}

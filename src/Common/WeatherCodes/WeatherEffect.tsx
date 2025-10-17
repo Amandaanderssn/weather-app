@@ -10,10 +10,17 @@ type WeatherEffectProps = {
 const WeatherEffect = (props: WeatherEffectProps) => {
     const { statusCode, location } = props;
     const WeatherComponent = WeatherCodes[statusCode];
+    console.log(WeatherCodes[statusCode])
+    console.log(WeatherComponent)
 
     React.useEffect(() => {
 
     }, [location])
+
+    if (!WeatherComponent) {
+        console.warn(`No weather animation exists for status code ${statusCode}`)
+        return null;
+    }
 
     return (
         <WeatherComponent />

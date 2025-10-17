@@ -10,18 +10,12 @@ const SearchBtn = () => {
 
     const { data } = weatherApi.useGetLocationQuery(location)
     const { data: options = [] } = weatherApi.useGetOptionsQuery(inputValue)
-    // console.log(options)
-    // console.log(isFetching)
-    // console.log(inputValue)
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleInputChange = (event: any) => {
         setInputValue(
             event.target.value
         )
-        // if (inputValue) {
-        //     console.log(options)
-        // }
     }
 
     const showInputField = () => {
@@ -29,13 +23,11 @@ const SearchBtn = () => {
     }
 
     const handleSearch = () => {
-        // console.log(data)
         setIsSearching(false)
         setLocation(inputValue)
         setInputValue('')
     }
 
-    // console.log(inputValue)
     return (
         <>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
