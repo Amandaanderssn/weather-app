@@ -31,23 +31,7 @@ const SunriseAndSunset = (props: SunriseAndSunsetProps) => {
         const rise = DateTime.fromFormat(`${todayStr} ${sunrise}`, "yyyy-MM-dd h:mm a", { zone: tz });
         const set = DateTime.fromFormat(`${todayStr} ${sunset}`, "yyyy-MM-dd h:mm a", { zone: tz });
 
-        //    // Exempel: testa kl 15:30 i samma tidszon som staden
-        //    const testHour = 17;   // 24h-format
-        //    const testMinute = 43;
-        // const testNow = DateTime.fromObject(
-        //     {
-        //         year: rise.year,
-        //         month: rise.month,
-        //         day: rise.day,
-        //         hour: testHour,
-        //         minute: testMinute,
-        //     },
-        //     { zone: tz }
-        // );
-
-        // console.log("now:", now.toISO(), now.toMillis());
-        // console.log("rise:", rise.toISO(), rise.toMillis());
-        // console.log("set:", set.toISO(), set.toMillis());
+        console.log(now)
 
         if (!rise.isValid || !set.isValid) {
             console.warn("Invalid sunrise or sunset time");
@@ -103,7 +87,6 @@ const SunriseAndSunset = (props: SunriseAndSunsetProps) => {
 
     return (
         <div className="OuterDiv">
-
             <div ref={arcRef} className="OuterImgDiv">
                 <img ref={sunRef} src={icon} className="Img" />
             </div>

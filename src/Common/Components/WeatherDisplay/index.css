@@ -10,10 +10,15 @@
 .ConditionText {
     /* width: 480px; */
     width: 80%;
-    font-size: 4.5rem;
+    height: 320px;
+    font-size: 3rem;
     background-color: #ffffff98;
-    padding: 2rem;
+    /* padding: 2rem; */
+    padding-left: 2rem;
+    padding-right: 2rem;
     border-radius: 1rem;
+    align-content: center;
+    margin-top: 1rem;
 }
 
 .InnerWeatherDiv {

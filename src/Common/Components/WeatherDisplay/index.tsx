@@ -17,7 +17,7 @@ const WeatherDisplay = (props: WeatherDisplayProps) => {
 
     const LocalDateAndTimeEpoch = location.location.localtime_epoch;
     const tz = location.location.tz_id;
-
+    console.log(location)
     const moreWeatherInfo = location.forecast.forecastday[0]
     const currentWeatherCode = location.current.condition.code
     return (

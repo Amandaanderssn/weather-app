@@ -10,8 +10,8 @@ type WeatherEffectProps = {
 const WeatherEffect = (props: WeatherEffectProps) => {
     const { statusCode, location } = props;
     const WeatherComponent = WeatherCodes[statusCode];
-    console.log(WeatherCodes[statusCode])
-    console.log(WeatherComponent)
+    // console.log(WeatherCodes[statusCode])
+    // console.log(WeatherComponent)
 
     React.useEffect(() => {
 

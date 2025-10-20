@@ -2,13 +2,27 @@
     /* background-color: #343434; */
     background-color: #ffffff98;
     border-radius: 1rem;
+    width: 13rem;
+    height: 6rem;
+    margin: 0.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    text-align: left;
+    align-content: center;
+}
+
+/* .OuterWeatherBoxDiv {
+    background-color: #343434;
+    background-color: #ffffff98;
+    border-radius: 1rem;
     width: 9rem;
     margin: 0.3rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     padding-left: 1rem;
     text-align: left;
-}
+} */
 
 .InnerWeatherBoxDiv {
     margin: 0;
@@ -21,5 +35,7 @@
     .OuterWeatherBoxDiv {
         margin: 0.2rem;
         margin-bottom: 1rem;
+        width: 9rem;
+        height: 4rem;
     }
 }
