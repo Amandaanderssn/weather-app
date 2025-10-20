@@ -8,12 +8,10 @@
 }
 
 .ConditionText {
-    /* width: 480px; */
     width: 80%;
     height: 320px;
     font-size: 3rem;
     background-color: #ffffff98;
-    /* padding: 2rem; */
     padding-left: 2rem;
     padding-right: 2rem;
     border-radius: 1rem;
@@ -28,9 +26,6 @@
     flex-wrap: wrap;
     margin: auto;
     margin-top: 1rem;
-    /* padding-bottom: 5rem; */
-
-    /* background-color: #ffffff98; */
     padding: 2rem;
     border-radius: 1rem;
 }

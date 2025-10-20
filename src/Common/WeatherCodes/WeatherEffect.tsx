@@ -5,13 +5,10 @@ type WeatherEffectProps = {
     statusCode: number
     location: any
 }
-// console.log(WeatherCodes[1000])
 
 const WeatherEffect = (props: WeatherEffectProps) => {
     const { statusCode, location } = props;
     const WeatherComponent = WeatherCodes[statusCode];
-    // console.log(WeatherCodes[statusCode])
-    // console.log(WeatherComponent)
 
     React.useEffect(() => {
 

@@ -32,15 +32,12 @@
 .InnerHighAndLowTempDiv {
     display: flex;
     flex-direction: column;
-    /* width: 80%; */
-    /* margin-left: 20%; */
 }
 
 .FeelsLike {
     width: 65%;
     margin: auto;
     text-align: left;
-    /* margin-left: 1rem; */
 }
 
 @media screen and (max-width: 600px) {

@@ -3,7 +3,6 @@ import { DateTime } from 'luxon';
 import './index.css'
 
 interface SunriseAndSunsetProps {
-    // localTimeZone: string
     localTimeZoneEpoch: number
     tz: any
     sunrise: string
@@ -13,8 +12,6 @@ interface SunriseAndSunsetProps {
 
 const SunriseAndSunset = (props: SunriseAndSunsetProps) => {
     const { localTimeZoneEpoch, tz, sunrise, sunset, icon } = props
-
-    // console.log("SUNRISE", sunrise)
 
     const sunRef = React.useRef<HTMLImageElement>(null);
     const arcRef = React.useRef<HTMLDivElement>(null);
@@ -51,15 +48,10 @@ const SunriseAndSunset = (props: SunriseAndSunsetProps) => {
             angle = Math.PI * (1 - progress);
         }
 
-        // --- Vinkel baserat på tid: vänster = sunrise, höger = sunset ---
-        // let progress = Math.min(Math.max((now.toMillis() - rise.toMillis()) / (set.toMillis() - rise.toMillis()), 0), 1);
-        // let angle = Math.PI * (1 - progress); // π = sunrise, 0 = sunset
-
-
         // --- Halvcirkel: responsiv ---
         const arcWidth = arc.clientWidth;
         const arcHeight = arc.clientHeight;
-        const clipFraction = 0.65; // som tidigare
+        const clipFraction = 0.65;
         const visibleHeight = arcHeight * (1 - clipFraction);
 
         const radiusX = arcWidth / 2;

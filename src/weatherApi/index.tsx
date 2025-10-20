@@ -1,4 +1,3 @@
-// Using rtk query to fetch drink data
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const weatherApiKey = import.meta.env.VITE_WEATHER_API_KEY
@@ -13,12 +12,7 @@ const weatherApi = createApi({
         getOptions: builder.query({
             query: (inputValue) => `/search.json?key=${weatherApiKey}&q=${inputValue}`,
         }),
-    }),
-    // endpoints: (builder) => ({
-    //     getOptions: builder.query({
-    //         query: (options) => `/search.json?key=${weatherApiKey}&q=${options}`,
-    //     }),
-    // }),
+    })
 });
 
 export default weatherApi

@@ -11,7 +11,6 @@ const SearchBtn = () => {
     const { data } = weatherApi.useGetLocationQuery(location)
     const { data: options = [] } = weatherApi.useGetOptionsQuery(inputValue)
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleInputChange = (event: any) => {
         setInputValue(
             event.target.value
