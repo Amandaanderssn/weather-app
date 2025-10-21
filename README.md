@@ -13,6 +13,6 @@ If you’d like to run the project locally, follow these steps:
 2. Install dependencies:
 `npm install`
 4. Create an account on WeatherAPI and generate your own API key
-5. Add your API key to a .env file and name the variable `VITE_WEATHER_API_KEY`
+5. Add your API key to a .env file with the variable `VITE_WEATHER_API_KEY = "your api key"`
 6. Start the project:
 `npm run dev`
