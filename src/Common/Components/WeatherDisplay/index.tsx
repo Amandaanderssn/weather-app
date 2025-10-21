@@ -8,6 +8,7 @@ import './index.css'
 import LocationInfo from '../LocationInfo';
 import WeatherEffect from '../../WeatherCodes/WeatherEffect';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import HourlyForecast from '../HourlyForecast';
 
 
 interface WeatherDisplayProps {
@@ -39,6 +40,9 @@ const WeatherDisplay = (props: WeatherDisplayProps) => {
                         <WeatherBox icon={<ThunderstormRoundedIcon fontSize='small' />} title="Rain" info={`${moreWeatherInfo.day.daily_chance_of_rain}%`} />
                     </div>
                 </div>
+            </div>
+            <div>
+                <HourlyForecast data={location} />
             </div>
             {/* <div className='OuterWeatherDiv'>
                 <h3 style={{ margin: 'auto', maxWidth: '30rem', textAlign: 'center' }} className='ConditionText'>{location.current.condition.text}</h3>

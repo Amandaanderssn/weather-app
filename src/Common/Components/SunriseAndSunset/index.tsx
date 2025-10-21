@@ -28,7 +28,6 @@ const SunriseAndSunset = (props: SunriseAndSunsetProps) => {
         const rise = DateTime.fromFormat(`${todayStr} ${sunrise}`, "yyyy-MM-dd h:mm a", { zone: tz });
         const set = DateTime.fromFormat(`${todayStr} ${sunset}`, "yyyy-MM-dd h:mm a", { zone: tz });
 
-        console.log(now)
 
         if (!rise.isValid || !set.isValid) {
             console.warn("Invalid sunrise or sunset time");

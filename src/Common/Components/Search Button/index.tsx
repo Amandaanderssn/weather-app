@@ -4,7 +4,15 @@ import React from 'react';
 import WeatherDisplay from '../WeatherDisplay';
 import "./index.css"
 
-const SearchBtn = () => {
+interface SearchButtonProps {
+    setHasSearched: React.Dispatch<React.SetStateAction<boolean>>
+
+}
+
+const SearchBtn = (props: SearchButtonProps) => {
+
+    const { setHasSearched } = props
+
     const [inputValue, setInputValue] = React.useState('')
     const [location, setLocation] = React.useState('')
     // const [isSearching, setIsSearching] = React.useState(false)
@@ -27,6 +35,7 @@ const SearchBtn = () => {
         event.preventDefault();
         setLocation(inputValue)
         setInputValue('')
+        setHasSearched(true);
     }
 
     return (
@@ -34,6 +43,7 @@ const SearchBtn = () => {
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 {/* {isSearching && */}
                 <form onSubmit={handleSearch} className='form'>
+
                     <input
                         className="input"
                         list="location-options"

@@ -1,0 +1,23 @@
+.hourlyCard {
+    background-color: #ffffff98;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    min-width: 5rem;
+}
+
+.icon {
+    width: 2.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .hourlyCard {
+        min-width: 3rem;
+        margin: 0.5rem;
+    }
+
+    .icon {
+        width: 2rem;
+    }
+
+}
