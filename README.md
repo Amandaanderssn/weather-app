@@ -1,4 +1,4 @@
-(This is currently a work in progress)
+Check out my deployed weather app here: [amandasweathrapp.netlify.app](https://amandasweathrapp.netlify.app)
 
 # React + TypeScript + Vite
 
