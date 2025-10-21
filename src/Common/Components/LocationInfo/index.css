@@ -3,18 +3,14 @@
     margin-top: 1rem;
     width: 80%;
     max-width: 30rem;
-    height: 268px;
+    height: 80vh;
+    /* height: 268px; */
     background-color: #ffffff98;
     padding: 2rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.locationName {
-    font-size: 1.5rem;
-    margin-top: 0;
+    justify-content: space-evenly;
 }
 
 .HighAndLowTempDiv {
@@ -26,33 +22,57 @@
 }
 
 .CurrentTemp {
-    font-size: 3rem;
+    font-size: 5rem;
+    margin: 0;
+
 }
 
 .InnerHighAndLowTempDiv {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: center;
 }
 
 .FeelsLike {
     width: 65%;
     margin: auto;
     text-align: left;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ConditionText {
+    width: 90%;
+    font-size: 2rem;
+    /* background-color: #ffffff98; */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 1rem;
+    align-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 600px) {
     .locationInfoOuterDiv {
         padding-bottom: 2rem;
         padding-top: 2rem;
-        height: 200px
+        height: 250px;
+        justify-content: space-between;
     }
 
     .CurrentTemp {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .FeelsLike {
         width: 75%;
         font-size: 0.8rem;
+    }
+
+    .ConditionText {
+        padding: 0;
+        width: 100%;
+        font-size: 1.5rem;
     }
 }

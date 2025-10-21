@@ -9,7 +9,7 @@ const HighAndLowTemp = (props: HighAndLowTempProps) => {
     const { temperature, highestOrLowest } = props
 
     return (
-        <p className="HighAndLowTemp">{highestOrLowest}: {temperature}</p>
+        <p className="HighAndLowTemp">{highestOrLowest}: {temperature}°C</p>
 
     )
 }

@@ -1,9 +1,17 @@
 .HighAndLowTemp {
     /* background-color: #343434; */
     background-color: #ffffff98;
-    width: 4rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    width: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     border-radius: 1rem;
     margin: 0.3rem;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .HighAndLowTemp {
+        width: 3rem;
+        font-size: 0.6rem;
+    }
 }

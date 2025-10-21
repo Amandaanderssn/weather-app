@@ -2,11 +2,12 @@ import SearchIcon from '@mui/icons-material/Search';
 import weatherApi from '../../../weatherApi';
 import React from 'react';
 import WeatherDisplay from '../WeatherDisplay';
+import "./index.css"
 
 const SearchBtn = () => {
     const [inputValue, setInputValue] = React.useState('')
     const [location, setLocation] = React.useState('')
-    const [isSearching, setIsSearching] = React.useState(false)
+    // const [isSearching, setIsSearching] = React.useState(false)
 
     const { data } = weatherApi.useGetLocationQuery(location)
     const { data: options = [] } = weatherApi.useGetOptionsQuery(inputValue)
@@ -17,12 +18,13 @@ const SearchBtn = () => {
         )
     }
 
-    const showInputField = () => {
-        setIsSearching(true)
-    }
+    // const showInputField = () => {
+    //     setIsSearching(true)
+    // }
 
-    const handleSearch = () => {
-        setIsSearching(false)
+    const handleSearch = (event: React.FormEvent) => {
+        // setIsSearching(false)
+        event.preventDefault();
         setLocation(inputValue)
         setInputValue('')
     }
@@ -30,33 +32,39 @@ const SearchBtn = () => {
     return (
         <>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                {isSearching &&
-                    <form>
-                        <input list="location-options" value={inputValue} onChange={handleInputChange} placeholder={'sök på stad..'} style={{ marginRight: '0.5rem' }} />
+                {/* {isSearching && */}
+                <form onSubmit={handleSearch} className='form'>
+                    <input
+                        className="input"
+                        list="location-options"
+                        value={inputValue}
+                        onChange={handleInputChange}
+                        placeholder={'Search for a city to see the weather...'}
+                    />
 
-                        {options.length > 0 && (
-                            <datalist id="location-options">
-                                {options.map((location: any) => {
-                                    return (
-                                        <option
-                                            key={location.id}
-                                            value={location.name}
-                                        >
-                                            {location.name}, {location.region}
-                                        </option>)
-                                })}
-                            </datalist>
-                        )}
-                        <button type="submit" onClick={!isSearching ? showInputField : handleSearch}>
-                            <SearchIcon sx={{ fontSize: 20 }} />
-                        </button>
-                    </form>
-                }
-                {!isSearching && (
+                    {options.length > 0 && (
+                        <datalist id="location-options">
+                            {options.map((location: any) => {
+                                return (
+                                    <option
+                                        key={location.id}
+                                        value={location.name}
+                                    >
+                                        {location.name}, {location.region}
+                                    </option>)
+                            })}
+                        </datalist>
+                    )}
+                    <button type="submit" className='formButton'>
+                        <SearchIcon sx={{ fontSize: 20 }} />
+                    </button>
+                </form>
+                {/* } */}
+                {/* {!isSearching && (
                     <button onClick={showInputField}>
                         <SearchIcon sx={{ fontSize: 20 }} />
                     </button>
-                )}
+                )} */}
             </div>
 
             {data && <WeatherDisplay location={data} />}

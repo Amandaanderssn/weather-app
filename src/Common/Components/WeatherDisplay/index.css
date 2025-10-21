@@ -1,3 +1,13 @@
+.locationName {
+    width: 85vw;
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 2rem;
+    margin-left: auto;
+    text-align: left;
+    display: flex;
+}
+
 .OuterWeatherDiv {
     display: flex;
     /* flex-direction: column; */
@@ -7,17 +17,6 @@
     margin-top: 1rem;
 }
 
-.ConditionText {
-    width: 80%;
-    height: 320px;
-    font-size: 3rem;
-    background-color: #ffffff98;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border-radius: 1rem;
-    align-content: center;
-    margin-top: 1rem;
-}
 
 .InnerWeatherDiv {
     display: flex;
@@ -26,11 +25,20 @@
     flex-wrap: wrap;
     margin: auto;
     margin-top: 1rem;
-    padding: 2rem;
+    padding: 0.8rem;
     border-radius: 1rem;
 }
 
 @media screen and (max-width: 600px) {
+
+    .locationName {
+        font-size: 0.8rem;
+        color: rgb(63, 63, 63);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .OuterWeatherDiv {
         flex-direction: column;
         justify-content: space-between;
