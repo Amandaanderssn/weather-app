@@ -1,7 +1,18 @@
-Check out my deployed weather app here: [amandasweathrapp.netlify.app](https://amandasweathrapp.netlify.app)
+# About the project
 
-# React + TypeScript + Vite
+This weather app was created by me, Amanda, using React and the WeatherAPI. The app displays current weather conditions, featuring animated weather effects that were designed and developed with the help of ChatGPT.
+
+# Try it out
+
+You can try the live version here:
+[amandasweathrapp.netlify.app](https://amandasweathrapp.netlify.app)
 
 Using the https://www.weatherapi.com to create my own weather app.
-
-I creating your own clone from this all you need to do is use your terminal wehen project us cloned and type "npm install" AND create your own api key through the weather api i used. If you want to check out the app without creating your own api key you can click on the link and you will get to my deployd app via netlify.
+If you’d like to run the project locally, follow these steps:
+1. Clone the repository
+2. Install dependencies:
+`npm install`
+4. Create an account on WeatherAPI and generate your own API key
+5. Add your API key to a .env file as shown in the code
+6. Start the project:
+`
