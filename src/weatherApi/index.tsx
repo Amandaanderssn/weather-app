@@ -4,7 +4,7 @@ const weatherApiKey = import.meta.env.VITE_WEATHER_API_KEY
 
 const weatherApi = createApi({
     reducerPath: 'api',
-    baseQuery: fetchBaseQuery({ baseUrl: `http://api.weatherapi.com/v1` }),
+    baseQuery: fetchBaseQuery({ baseUrl: `https://api.weatherapi.com/v1` }),
     endpoints: (builder) => ({
         getLocation: builder.query({
             query: (location) => `/forecast.json?key=${weatherApiKey}&q=${location}&aqi=no`,
